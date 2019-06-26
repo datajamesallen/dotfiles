@@ -101,5 +101,4 @@ alias q="exit"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+
