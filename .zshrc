@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+TERM="xterm-256color"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -101,4 +102,8 @@ alias q="exit"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+
+# I hate the default green on blue of this ls color
+LS_COLORS=$LS_COLORS:'ow=4;34:'; export LS_COLORS
+LS_COLORS=$LS_COLORS:'di=0;35:'; export LS_COLORS
 
