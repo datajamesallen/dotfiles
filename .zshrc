@@ -103,7 +103,40 @@ alias q="exit"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-# I hate the default green on blue of this ls color
-LS_COLORS=$LS_COLORS:'ow=4;34:'; export LS_COLORS
-LS_COLORS=$LS_COLORS:'di=0;35:'; export LS_COLORS
+# this will color ls the way I like it.
 
+LS_COLORS=$LS_COLORS:'ow=1;40:'; export LS_COLORS;
+LS_COLORS=$LS_COLORS:'di=1;35:'; export LS_COLORS;
+LS_COLORS=$LS_COLORS:'ex=4;1;32:'; export LS_COLORS;
+
+# make picture files PURPLE
+LS_COLORS=$LS_COLORS:'*.jpg=0;34:*.gif=0;34:*.bmp=0;34:*.xbm=0;34:*.tif=0;34:*.png=0;34:'; export LS_COLORS;
+
+# data-related files RED
+LS_COLORS=$LS_COLORS:'*.csv=0;31:*.xlsx=0;31:*.txt=0;31:*.json=0;31:*.db=0;31:*.md=0;31:'; export LS_COLORS;
+
+# code-related files GREEN
+LS_COLORS=$LS_COLORS:'*.py=0;32:*.R=0;32:*.c=0;32:*.o=0;32:'; export LS_COLORS;
+
+
+#PATH=$PATH:~/bin
+# function that uses surf (suckless) to search duckduckgo with the first agument\
+# you can change this to firefox, etc
+#function duck() {
+#	surf "https://duckduckgo.com/$*"
+#}
+#function google() {
+#	surf "https://google.com/"$@
+#}
+
+PATH="/home/james/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/james/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/james/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/james/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/james/perl5"; export PERL_MM_OPT;
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/james/google-cloud-sdk/path.zsh.inc' ]; then . '/home/james/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/james/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/james/google-cloud-sdk/completion.zsh.inc'; fi
